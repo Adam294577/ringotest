@@ -100,6 +100,20 @@ export default {
 
 
 
+    const imgOnload= () =>{
+        let loadImg = new Image()
+        pagesData.value.forEach(item =>{
+            loadImg = new Image()
+            if(item !== null){
+              loadImg.src = item
+            }
+        })
+    }
+    imgOnload()
+
+  
+
+
 
 
 
@@ -145,6 +159,9 @@ export default {
     const flipbook = ref(null)
     onMounted(()=>{
       console.log(flipbook);
+
+
+
       
       window.addEventListener('keydown', (ev) => {
         console.log(ev.keyCode);
@@ -161,6 +178,7 @@ export default {
       
     })
     })
+
 
 
 
