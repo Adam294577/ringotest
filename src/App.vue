@@ -1,34 +1,5 @@
 <script>
 import Flipbook from 'flipbook-vue'
-import testImg1 from '@/img/01.jpg'
-import testImg2 from '@/img/02.jpg'
-import testImg3 from '@/img/03.jpg'
-import testImg4 from '@/img/04.jpg'
-import testImg5 from '@/img/05.jpg'
-import testImg6 from '@/img/06.jpg'
-import testImg7 from '@/img/07.jpg'
-import testImg8 from '@/img/08.jpg'
-import testImg9 from '@/img/09.jpg'
-import testImg10 from '@/img/10.jpg'
-import testImg11 from '@/img/11.jpg'
-import testImg12 from '@/img/12.jpg'
-import testImg13 from '@/img/13.jpg'
-import testImg14 from '@/img/14.jpg'
-import testImg15 from '@/img/15.jpg'
-import testImg16 from '@/img/16.jpg'
-import testImg17 from '@/img/17.jpg'
-import testImg18 from '@/img/18.jpg'
-import testImg19 from '@/img/19.jpg'
-import testImg20 from '@/img/20.jpg'
-import testImg21 from '@/img/21.jpg'
-import testImg22 from '@/img/22.jpg'
-import testImg23 from '@/img/23.jpg'
-import testImg24 from '@/img/24.jpg'
-import testImg25 from '@/img/25.jpg'
-import testImg26 from '@/img/26.jpg'
-
-
-
 import axios from 'axios';
 
 import { ref , onMounted , watch } from 'vue';
@@ -41,62 +12,20 @@ export default {
   setup(props) {
     const pagesData = ref([null])
     const pagesHiRes = ref([null])
+    let pageTotal = 26;
+    const importAllImg = ()=>{
+      let url = ''
+      for (let i = 1; i <= pageTotal; i++) {
+        url = require(`@/img/${i}.jpg`)
+        pagesData.value.push(url);
+        pagesHiRes.value.push(url);
+      }
+    }
+    importAllImg()
     console.log(pagesData);
 
 
-    pagesData.value.push(testImg1)
-    pagesData.value.push(testImg2)
-    pagesData.value.push(testImg3)
-    pagesData.value.push(testImg4)
-    pagesData.value.push(testImg5)
-    pagesData.value.push(testImg6)
-    pagesData.value.push(testImg7)
-    pagesData.value.push(testImg8)
-    pagesData.value.push(testImg9)
-    pagesData.value.push(testImg10)
-    pagesData.value.push(testImg11)
-    pagesData.value.push(testImg12)
-    pagesData.value.push(testImg13)
-    pagesData.value.push(testImg14)
-    pagesData.value.push(testImg15)
-    pagesData.value.push(testImg16)
-    pagesData.value.push(testImg17)
-    pagesData.value.push(testImg18)
-    pagesData.value.push(testImg19)
-    pagesData.value.push(testImg20)
-    pagesData.value.push(testImg21)
-    pagesData.value.push(testImg22)
-    pagesData.value.push(testImg23)
-    pagesData.value.push(testImg24)
-    pagesData.value.push(testImg25)
-    pagesData.value.push(testImg26)
 
-    pagesHiRes.value.push(testImg1)
-    pagesHiRes.value.push(testImg2)
-    pagesHiRes.value.push(testImg3)
-    pagesHiRes.value.push(testImg4)
-    pagesHiRes.value.push(testImg5)
-    pagesHiRes.value.push(testImg6)
-    pagesHiRes.value.push(testImg7)
-    pagesHiRes.value.push(testImg8)
-    pagesHiRes.value.push(testImg9)
-    pagesHiRes.value.push(testImg10)
-    pagesHiRes.value.push(testImg11)
-    pagesHiRes.value.push(testImg12)
-    pagesHiRes.value.push(testImg13)
-    pagesHiRes.value.push(testImg14)
-    pagesHiRes.value.push(testImg15)
-    pagesHiRes.value.push(testImg16)
-    pagesHiRes.value.push(testImg17)
-    pagesHiRes.value.push(testImg18)
-    pagesHiRes.value.push(testImg19)
-    pagesHiRes.value.push(testImg20)
-    pagesHiRes.value.push(testImg21)
-    pagesHiRes.value.push(testImg22)
-    pagesHiRes.value.push(testImg23)
-    pagesHiRes.value.push(testImg24)
-    pagesHiRes.value.push(testImg25)
-    pagesHiRes.value.push(testImg26)
 
 
 
